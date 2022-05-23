@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #152569;
+    --secondColor: #4580b7;
+    --mainTransition: all 1s ease;
+    --main-shadow: 0 0 3px gray;
+}
+
+body {
+    background: var(--mainColor);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login-page {
+    border-radius: 5px;
+    background: white;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+
+/* section form */
+
+.form {
+    padding: 30px 10px;
+}
+
+.form #email,
+.form #pwd {
+    box-shadow: var(--main-shadow);
+    font-size: 18px;
+    color: var(--mainColor);
+}
+
+.form #email::placeholder,
+.form #pwd::placeholder {
+    color: var(--mainColor);
+    font-size: 18px;
+}
+
+.form-check {
+    color: var(--mainColor);
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+.last {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: var(--secondColor);
+    color: white;
+    transition: var(--mainTransition);
+    letter-spacing: 1px;
+    box-shadow: var(--main-shadow);
+}
+
+.btn:hover {
+    color: white;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 500px) {
+    .login-page {
+        margin: 100px 0;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo img {
+        width: 200px;
+        border-radius: 5px;
+    }
+    .form {
+        flex: 0 0 50%;
+    }
+    input[type="password"] {
+        margin-bottom: 40px;
+    }
+    .last {
+        margin-bottom: 40px;
+    }
+    .btn {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
+        width: 60%;
+    }
+    .logo img {
+        width: 250px;
+        border-radius: 5px;
+    }
+    .btn {
+        padding: 8px 25px;
+        font-size: 20px;
+    }
+}

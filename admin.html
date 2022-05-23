@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Products</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="left-side-inps">
+            <div class="logo">
+                <img src="imgs/logo.jpeg" alt="logo" />
+                <hr />
+            </div>
+            <div class="form">
+                <form>
+                    <div class="form-group">
+                        <input id="addProduct" type="button" class="form-control  " value="Add Products" />
+                    </div>
+                    <div class="form-group">
+                        <input id="addManufacturer" type="button" class="form-control" value="Add Manufacturer" />
+
+                    </div>
+                    <div class="form-group">
+                        <input id="addseller" type="button" class="form-control" value="Add Seller" />
+                    </div>
+                    <div class="form-group">
+                        <input id="products" type="button" class="form-control" value="Products" />
+                    </div>
+                    <div class="form-group">
+                        <input id="soldProducts" type="button" class="form-control" value="Sold Products" />
+                    </div>
+                    <div class="form-group">
+                        <input id="problems" type="button" class="form-control" value="Problems" />
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- add products -->
+        <section id="sectionAddPro" class="view-inps" style="display: none;">
+            <h1>enter product details</h1>
+            <form>
+                <div class="btn-group-vertical">
+                    <select class="browser-default custom-select select-field">
+                        <option selected>Select Manufacturer</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    <!-- <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
+                        Select Manufacturer
+                        
+                      </button> -->
+                    <input type="text" class=" form-control" placeholder="Product Name">
+                    <input type="text" class=" form-control " placeholder="Product Amount">
+                    <input type="button" class=" form-control " value="Add Product">
+
+                </div>
+            </form>
+        </section>
+        <!-- add manufacturer -->
+        <section class="view-inps" id="sectionManu" style="display: none;">
+            <h1>enter manufacturer data</h1>
+            <form>
+                <div class="inputs">
+                    <input type="text" class="form-control" placeholder="Manufacturer Name">
+                    <input type="text" class=" form-control" placeholder="Manufacturer Email">
+
+                    <div class="pass-input">
+                        <input type="password" placeholder="Manufacturer Password" id="manuPass" />
+                        <span style="font-size: 15px;" class=" fa fa-eye icon" id="toggleManuPass"></span>
+                    </div>
+
+                    <input type="button" class=" form-control " value="Add Manufacturer">
+
+                </div>
+            </form>
+        </section>
+        <!-- add seller -->
+        <section id="sectionSeller" class="view-inps" style="display: none;">
+            <h1>enter seller data</h1>
+            <form>
+                <div class="inputs">
+                    <input type="text" class=" form-control" placeholder="Seller Name">
+                    <input type="text" class=" form-control" placeholder="Seller Email">
+
+                    <div class="pass-input">
+                        <input type="password" placeholder="Seller Password" id="sellerPass" />
+                        <span style="font-size: 15px;" class=" fa fa-eye icon" id="toggleSellerPass"></span>
+                    </div>
+
+
+                    <input type="button" class=" form-control " value="Add Seller ">
+
+                </div>
+            </form>
+        </section>
+        <!-- products -->
+
+        <section id="sectionProducts">
+            <form>
+                <select class="browser-default custom-select select-field select-product select-pro">
+                    <option selected>Select Manufacturer</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+
+            </form>
+            <section class="all-products">
+                <div id="product1" class="product1">
+                    <h3>product one</h3>
+                    <div class="separate-line"></div>
+                    <h5>10 items</h5>
+                </div>
+                <div class="product1">
+                    <h3>product two</h3>
+                    <div class="separate-line"></div>
+                    <h5>10 items</h5>
+                </div>
+                <div class="product1">
+                    <h3>product three</h3>
+                    <div class="separate-line"></div>
+                    <h5>10 items</h5>
+                </div>
+
+            </section>
+        </section>
+        <!-- show products -->
+        <section id="sectionShowPro" class="show-products" style="display: none;">
+            <div class="product-details">
+                <span id="backToPro" class="fas fa-arrow-left"></span>
+                <h2>product one</h2>
+                <h5>10 items </h5>
+            </div>
+            <div class="returned-products">
+                <section class="returned-items">
+                    <div id="item1" class="item1">
+                        <img src="imgs/code.jpg" alt="QrCode">
+                        <h5>item one</h5>
+                    </div>
+                    <div class="item1">
+                        <img src="imgs/code.jpg" alt="QrCode">
+                        <h5>item two</h5>
+                    </div>
+                    <div class="item1">
+                        <img src="imgs/code.jpg" alt="QrCode">
+                        <h5>item three</h5>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+        <!-- sold products -->
+        <section class="sold-products" id="sectionSoldPro" style="display: none;">
+            <nav>
+                <h2>sold items</h2>
+                <h5>10 items sold</h5>
+                <form>
+                    <select class="browser-default custom-select select-field select-product">
+                        <option selected>Select Manufacturer</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                </form>
+
+            </nav>
+            <div class="codes">
+                <div class="code-pro1">
+                    <div class="img-container">
+                        <img src="imgs/code.jpg" alt="QRCode">
+                    </div>
+                    <div class="returned-product">
+                        <h4>product one</h4>
+                        <h4>item five</h4>
+                    </div>
+                </div>
+                <div class="code-pro1">
+                    <div class="img-container">
+                        <img src="imgs/code.jpg" alt="QRCode">
+                    </div>
+                    <div class="returned-product">
+                        <h4>product one</h4>
+                        <h4>item five</h4>
+                    </div>
+                </div>
+                <div class="code-pro1">
+                    <div class="img-container">
+                        <img src="imgs/code.jpg" alt="QRCode">
+                    </div>
+                    <div class="returned-product">
+                        <h4>product one</h4>
+                        <h4>item five</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- problems -->
+        <section id="sectionProblems" class="problems" style="display: none;">
+            <h1>users' problems</h1>
+            <div class="problem-box">
+                <h5>Username</h5>
+                <h5>Username@examble.com</h5>
+                <h4>problem text will be here</h4>
+            </div>
+            <div class="problem-box">
+                <h5>Username</h5>
+                <h5>Username@examble.com</h5>
+                <h4>problem text will be here</h4>
+            </div>
+            <div class="problem-box">
+                <h5>Username</h5>
+                <h5>Username@examble.com</h5>
+                <h4>problem text will be here</h4>
+            </div>
+
+        </section>
+
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
